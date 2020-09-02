@@ -11,7 +11,7 @@ Provided is a basic project bootstrapped with Create React App and linked to the
 
 ### Overview
 
-- There are 8 jobs in a database, each associated with 1-2 lists. There are a total of 4 lists. We will provide a spreadsheet for the jobs and the lists. There is one user.
+- There are 8 jobs in a database, each associated with 1-2 lists. There is one user. There are a total of 4 lists. Spreadsheet for lists and jobs here: https://airtable.com/invite/l?inviteId=invdR5VkhyhUVs1LB&inviteToken=bea5c2b57e501834ecfa77007d5559229c2727b7d8847e928a46449da211fe1c. 
 - Each list title should appear in a sidebox, with a checkbox next to the title. All the lists should be hidden at first, and there should be no check boxes checked. When a user clicks on the checkbox and toggles it on, the jobs that are associated to that list should appear in the center of the page. When a user toggles the check box off, the jobs should disappear again.
 - If a job has two lists associated with it, and one list is hidden, the job should still be shown.
 
