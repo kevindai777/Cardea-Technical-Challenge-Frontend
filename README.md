@@ -1,5 +1,34 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+After cloning, run `yarn install` in the directory, and then `yarn schema` to generate types for the Apollo Client fort GraphQL 
+
+
+## Coding Assessment
+
+For this code assessment, we want to see you build a simple, single page web app that integrates React, GraphQL and Django. 
+
+Provided is a basic project bootstrapped with Create React App and linked to the provided Django through Graphene/Apollo GraphQL.
+
+### Overview
+
+- There are 8 jobs in a database, each associated with 1-2 lists. There are a total of 4 lists. We will provide a spreadsheet for the jobs and the lists. There is one user.
+- Each list title should appear in a sidebox, with a checkbox next to the title. All the lists should be hidden at first, and there should be no check boxes checked. When a user clicks on the checkbox and toggles it on, the jobs that are associated to that list should appear in the center of the page. When a user toggles the check box off, the jobs should disappear again.
+- If a job has two lists associated with it, and one list is hidden, the job should still be shown.
+
+NOTE: There's no need to worry about making it pretty at all. The key is that the front end communicates with the backend.
+
+### Specs and Requirements 
+- Utilise hooks and state where suitable.
+- All communication between the React frontend and Django backend should ideally occur through Graphene/Apollo GraphQL.
+- The front end should be written using Typescript.
+
+
+## Generating Types From Apollo for GraphQL
+
+### `yarn schema`
+
+Running this will sync the Apollo client's types with the GraphQL endpoint (Django Backend)
+
 ## Available Scripts
 
 In the project directory, you can run:
