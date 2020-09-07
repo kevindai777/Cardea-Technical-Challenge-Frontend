@@ -3,10 +3,14 @@ import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 import { HelloWorldQuery } from "./__generated__/HelloWorldQuery";
 import Category from './Category';
-import Job from './Job';
+import Jobs from './Jobs'
 
 const HELLOWORLD_QUERY = gql`
     query HelloWorldQuery {
+        jobs {
+            id
+            title
+        }
         categories {
             id
             name
@@ -15,10 +19,6 @@ const HELLOWORLD_QUERY = gql`
             id
             jobID
             categoryID
-        }
-        jobs {
-            id
-            title
         }
     }
 `
@@ -54,23 +54,22 @@ const HelloWorld = () => {
     let mapJobs = function(datalogs: any) {
         let toUse = datalogs.jobcategories 
     
-        return toUse.map((object: any) =>
-            <Job
-                jobID={object.jobID}
-                categoryID={object.categoryID}
-                categories={arrayOfCategories}
-            />
-        )    
+        return <Jobs 
+                    categories={toUse}
+                    arrayOfCategories={arrayOfCategories}
+               />
     }
 
     return(
         <>
             {loading && <h1>Loading</h1>}
             {error && <h1>Error</h1>}
-            {data ? mapTitles(data) : null}
-            <div>
+            <div id='titles'>
+                {data ? mapTitles(data) : null}
+            </div>
+            <div id='jobs'>
                 <h1>Jobs:</h1>
-            {data ? mapJobs(data) : null}
+                {data ? mapJobs(data) : null}
             </div>
         </>
     )

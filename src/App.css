@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+#titles {
+  border: thick solid #000
+}
+
+#jobs {
+  border: thick solid #000
+}

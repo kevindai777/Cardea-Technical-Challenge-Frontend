@@ -36,8 +36,7 @@ class Category extends React.Component<ICategoryProps, ICategoryState> {
     render() {
         return (
             <div>
-                {this.props.name && <h1>{this.props.name}</h1>}
-                {this.props.id ? this.createButton() : null}
+                {this.props.name && <h1>{this.props.name} {this.props.id ? this.createButton() : null}</h1>}
             </div>
         )
     }
